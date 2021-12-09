@@ -1,20 +1,18 @@
 require('dotenv').config()
 
-const { Telegraf }= require('telegraf')
+const { Telegraf } = require('telegraf')
+const Markup = require("telegraf");
+const Stage = require("telegraf");
+const session = require("telegraf");
+const WizardScene = require("telegraf");
 
 const BOT = new Telegraf(process.env.BOT_TOKEN)
+const calculator = require('./api/nairaToDollar')
+
 
 // start command
 BOT.start((ctx) =>{
-    ctx.reply('Welcome to Sars Bot')
-})
-
-BOT.help((ctx) => {
-    ctx.reply('How can I help you?')
-})
-
-BOT.hears('Hello', (ctx) => {
-    ctx.reply('How can we help you?')
+    ctx.reply('Welcome Naira to Dollar Exchange Rate Calculator')
 })
 
 

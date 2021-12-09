@@ -10,6 +10,7 @@
   "author": "Utibeima Effiong",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.23.0",
     "dotenv": "^10.0.0",
     "telegraf": "^4.4.2"
   },
